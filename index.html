@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>node-webkit demo</title>
+  <meta charset="UTF-8">
+  <link type="text/css" rel='stylesheet' href='./style.css'/>
+  <script>
+    var fs = require('fs');
+    document.addEventListener('DOMContentLoaded', function() {
+      var contents = fs.readFileSync('./sample.txt');
+      document.getElementById("sample").innerHTML = contents;
+    });
+  </script>
+</head>
+<body>
+  <div id='sample'></div>
+  <div>This is using node.js <script>document.write(process.version)</script>.</div>
+  <div>lodash: <script>var lodash = require('lodash'); document.write(lodash)</script></div>
+</body>
+</html>
+
